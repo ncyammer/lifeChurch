@@ -1,0 +1,60 @@
+#covidNotice{
+    width: 100%;
+    background-color: yellow;
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+}
+
+.customNav{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    }
+.navbar-nav{
+    margin-left: auto;
+    margin-right: 0 !important;
+  }
+
+.nav-item{
+    padding-left: 16px !important;
+}
+
+.jumbotrom{
+    height:50vh;
+    margin-bottom: 0rem !important;
+}
+
+#landingInfo{
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    margin-bottom: 40px;
+}
+
+#landingPageGroups{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "group1 group1 group2 group2" "group1 group1 group3 group4";
+}
+.group1{
+    grid-area: group1;
+    text-align: center;
+    background-color: turquoise;
+}
+.group2{
+    grid-area: group2;
+    text-align: center;
+    background-color: yellow;
+}
+.group3{
+    grid-area: group3;
+    text-align: center;
+    background-color: tan;
+}
+.group4{
+    grid-area: group4;
+    text-align: center;
+    background-color: gainsboro;
+}
