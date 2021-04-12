@@ -10,6 +10,7 @@
     position: fixed;
     z-index: 100;
     width: 100%;
+    background-color: transparent !important;
     }
 .navbar-nav{
     margin-left: auto;
@@ -20,9 +21,13 @@
     padding-left: 16px !important;
 }
 
-.jumbotrom{
+.jumbotron{
     height:50vh;
-    margin-bottom: 0rem !important;
+    margin-bottom: 0px;
+    padding: 0rem !important;
+}
+.carousel{
+    height: 100% !important;
 }
 
 #landingInfo{
@@ -57,4 +62,29 @@
     grid-area: group4;
     text-align: center;
     background-color: gainsboro;
+}
+
+/* FOOTER */
+footer{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 40% 20% 20% 20% 20%;
+    grid-template-areas: "logo about ministries resources";
+    align-items: baseline;
+}
+.logoFooter{
+    grid-area: logo;
+}
+.aboutFooter{
+    grid-area: about;
+}
+.ministriesFooter{
+    grid-area: ministries;
+}
+.resourcesFooter{
+    grid-area: resources;
+}
+footer li{
+    list-style: none;
+    padding-top: 10px;
 }
