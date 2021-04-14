@@ -11,12 +11,15 @@ p{
     font-family: 'Noto Sans', sans-serif;
 }
 
-#covidNotice{
+#covidNotice, #covidNotice-mobile{
     width: 100%;
     background-color: yellow;
     position: fixed;
     top: 0px;
     z-index: 100;
+}
+#covidNotice-mobile{
+    display: none;
 }
 
 /* NAVBAR */
@@ -24,6 +27,7 @@ p{
     position: fixed;
     z-index: 100;
     width: 100%;
+    margin-top: 24px;
     background: transparent !important;
     }
 .customNavScroll{
@@ -40,57 +44,186 @@ p{
 .nav-item{
     padding-left: 16px !important;
 }
-
-.jumbotron{
-    height:50vh;
-    margin-bottom: 0px;
-    padding: 0rem !important;
+.navbar-brand{
+    position: absolute;
+    top: 0px;
+    /* background-color:gold;
+    box-shadow: black; */
+    border-radius: 5px;
 }
-.carousel{
-    height: 100% !important;
+.navbar-brand-customMobile{
+    display: none;
 }
-
-#landingInfo{
+.nav-link{
+    color: white !important;
+}
+.navbar-toggler{
     margin-left: auto;
-    margin-right: auto;
-    width: 900px;
-    margin-bottom: 40px;
+    margin-right: 0 !important;
+  }
+.navbar-toggler{
+    color: white !important;
+}
+.spacer{
+    height: 40px;
 }
 
-#landingPageGroups{
+/* CAROUSEL */
+.carousel{
+    width: 100% !important;
+}
+.carouselspacer{
+    height: 24px;
+}
+.overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+.marginSetter{
+    margin-left: 140px;
+    margin-right: 140px;
+}
+
+.blueBackground{
+    background-color: rgba(118, 166, 202, 0.25);
+}
+
+/* MEET OUR PASTOR */
+#pastorSection{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    column-gap: 5%;
+    row-gap: 2%;
+    grid-template-areas: 
+        "pastorImg pastorName"
+        "pastorImg pastorBio";
+}
+#pastorName{
+    grid-area: pastorName;
+}
+#pastorImg{
+    grid-area: pastorImg;
+    justify-self: end;
+}
+#pastorBio{
+    grid-area: pastorBio;
+}
+
+/* SUNDAY WORSHIP SERVICE */
+#sundayService{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/baptism.jpeg);
+    color: white;
+}
+#swsLayout{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 50% 50%;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-areas: 
+        "ourService ourService"
+        "serviceInfo map";
+}
+#ourService{
+    grid-area: ourService;
+}
+#serviceInfo{
+    grid-area: serviceInfo;
+    border: 1px solid white;
+    padding: 20px;
+}
+#map{
+    grid-area: map;
+    background-image: url(../images/map.png);
+    background-position: center;
+    background-size: cover;
+}
+
+/* GET CONNTECTED SECTION */
+#landingPageGroups{
+    width: 100%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-template-rows: 49% 49%;
+    row-gap: 2%;
+    column-gap: 2%;
     grid-template-areas: "group1 group1 group2 group2" "group1 group1 group3 group4";
 }
-.group1{
+#mcCard{
     grid-area: group1;
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url(../images/yaMissionalCommunity2.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    background-color: turquoise;
+    color: white;
+    cursor: pointer;
 }
-.group2{
+#sermonsCard{
     grid-area: group2;
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url(../images/sermons.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    background-color: yellow;
+    color: white;
+    cursor: pointer;
 }
-.group3{
+#youthCard{
     grid-area: group3;
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url(../images/youth.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    background-color: tan;
+    color: white;
+    cursor: pointer;
 }
-.group4{
+#joyLandCard{
     grid-area: group4;
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url(../images/joyland.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    background-color: gainsboro;
+    color: white;
+    cursor: pointer;
 }
+
+.btn{
+    background-color: #65A739;
+    border: 3px solid#65A739;
+    display: grid;
+    justify-content: center;
+}
+.btn:hover{
+    background-color: white;
+    color: #65A739;
+    border: 3px solid#65A739;
+}
+
 
 /* FOOTER */
 footer{
+    background-color:rgba(102, 167, 58, 0.75) !important;
+    padding: 40px;
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 40% 20% 20% 20% 20%;
+    grid-template-columns: 30% 20% 25% 20%;
     grid-template-areas: "logo about ministries resources";
-    align-items: baseline;
+    align-items: flex-start;
 }
 .logoFooter{
     grid-area: logo;
@@ -104,7 +237,56 @@ footer{
 .resourcesFooter{
     grid-area: resources;
 }
+footer ul{
+    color: white;
+}
 footer li{
     list-style: none;
     padding-top: 10px;
+}
+footer li a{
+    text-decoration: none;
+    color: white;
+}
+footer li a:hover{
+    text-decoration: underline;
+    color: white;
+}
+#socials{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 70% 30%;
+    justify-content: flex-start;
+    justify-items: center;
+    row-gap: 20px;
+    grid-template-areas: "footerLogo footerLogo footerLogo" "fb ig mail";
+}
+#footerLogo{
+    grid-area: footerLogo;
+    cursor: pointer;
+}
+#fb{
+    grid-area: fb;
+    cursor: pointer;
+}
+#ig{
+    grid-area: ig;
+    cursor: pointer;
+}
+#mail{
+    grid-area: mail;
+    cursor: pointer;
+}
+
+
+
+#sofBanner{
+    background-size: contain;
+    background: url(../images/sofHeroBanner.png);
+}
+#joyLandBanner{
+    background-image: url(../images/joyLandHeroBanner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }

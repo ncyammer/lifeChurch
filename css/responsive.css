@@ -1,0 +1,110 @@
+@media only screen and (max-width: 847px){
+    .customNav{
+        margin-top: 48px;
+        white-space: wrap;
+    }
+    .carouselspacer{
+        height: 48px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .marginSetter{
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    #landingPageGroups{
+        width: 100%;
+        height: 500px;
+        display: grid;
+        grid-template-columns: 49% 49%;
+        grid-template-rows: 33% 33% 33%;
+        row-gap: 2%;
+        column-gap: 2%;
+        grid-template-areas: "group1 group1" "group2 group2" "group3 group4";
+    }
+    footer{
+        background-color:rgba(102, 167, 58, 0.75) !important;
+        padding: 40px;
+        display: grid;
+        grid-template-rows: auto auto;
+        row-gap: 40px;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-areas: "logo . ." "about ministries resources";
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+
+@media only screen and (max-width: 576px){
+    #covidNotice{
+        display: none;
+    }
+    #covidNotice-mobile{
+        display: block;
+    }
+    .customNav{
+        margin-top: 24px;
+    }
+    .carouselspacer{
+        height: 24px;
+    }
+    .navbar-brand{
+        display: none;
+    }
+    .navbar-brand-customMobile{
+        display: block;
+    }
+    .spacer{
+        height: 20px;
+    }
+    .marginSetter{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    #pastorSection{
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto;
+        row-gap: 2%;
+        grid-template-areas: 
+            "pastorImg" "pastorName"
+            "pastorBio";
+    }
+    #pastorName{
+        text-align: center;
+    }
+    #pastorImg{
+        justify-self: center;
+    }
+    #pastorBio{
+        grid-area: pastorBio;
+    }
+    #swsLayout{
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr;
+        column-gap: 20px;
+        row-gap: 20px;
+        grid-template-areas: 
+            "ourService"
+            "serviceInfo" 
+            "map";
+    }
+    #landingPageGroups{
+        height: 350px;
+        display: grid;
+    }
+    footer{
+        padding: 20px;
+        grid-template-rows: auto;
+        row-gap: 0px;
+        grid-template-columns: auto;
+        grid-template-areas: "logo";
+    }
+    .aboutFooter, .ministriesFooter, .resourcesFooter{
+        display: none;
+    }
+
+}

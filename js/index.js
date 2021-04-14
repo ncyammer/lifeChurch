@@ -9,3 +9,9 @@
 //         }
 //     })
 //   })
+
+$("#viewDetails").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#sundayService").offset().top
+    }, 500);
+});
