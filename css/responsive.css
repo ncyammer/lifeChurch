@@ -3,9 +3,9 @@
         margin-top: 48px;
         white-space: wrap;
     }
-    .carouselspacer{
+    /* .carouselspacer{
         height: 48px;
-    }
+    } */
 }
 
 @media only screen and (max-width: 768px){
@@ -47,15 +47,15 @@
     .customNav{
         margin-top: 24px;
     }
-    .carouselspacer{
+    /* .carouselspacer{
         height: 24px;
-    }
-    .navbar-brand{
+    } */
+    /* .navbar-brand{
         display: none;
-    }
-    .navbar-brand-customMobile{
+    } */
+    /* .navbar-brand-customMobile{
         display: block;
-    }
+    } */
     .spacer{
         height: 20px;
     }
